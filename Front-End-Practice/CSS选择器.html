@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS选择器</title>
+    <style>
+         /* 这是一个元素选择器，应用于所有h2元素 */
+       h2 {
+        color: aqua;
+       } 
+       /* 这是一个类选择器，应用于类名为highlight的元素 */
+       h3。highlight {
+        background-color: rgb(225, 230, 173);
+       }
+         /* 这是一个ID选择器，应用于id为header的元素 */
+       #header {
+        font-size: 35px;
+       }
+       /* 这是一个通用选择器，应用于所有元素 */
+       * {
+        font-family: 'KaiTi';
+       }
+         /* 这是一个子元素选择器，应用于类名为father的元素下的类名为son的子元素 */
+         .father > p {
+        color: rgb(0, 255, 8);
+        font-weight: bolder;
+         }
+         /* 这是一个后代选择器，应用于类名为father的元素下的所有后代元素 */
+         .father p {
+            color: #0000ff;
+            font-size: 30px;
+         }
+            /* 这是一个相邻兄弟选择器，应用于紧接在h3元素后的p元素 */
+            h3 + p {
+            background-color: #0000ff;
+            }
+            /* 这是一个伪类选择器，应用于id为element的元素在鼠标悬停时 */
+            #element:hover {
+                background-color: blueviolet;
+            }
+            /* 
+            选中第一个子元素 ：frist-child
+                            :nth-child
+                            :active
+            */
+            /* 伪元素选择器
+            ::after
+            ::backdrop */
+    </style>
+    </head>
+<body>
+    <h1>不同类型的css选择器</h1>
+    <h2>这是一个元素选择器示例</h2>
+    <h3 class="highlight">这是一个类选择器示例</h3>
+    <h3>这是另一个类选择器示例</h3>
+    <h4 id="header">这是一个ID选择器示例</h4>
+    <hr>
+
+    <div class="father">
+        <p class="son">这是一个子元素选择器示例</p>
+        <div>
+            <p class="grandson">这是一个后代选择器示例</p>
+        </div>
+    </div>
+
+    <p>这是一个普通的 p 标签</p>
+    <h3>这是一个相邻兄弟选择器示例</h3>
+    <p>这是另一个 p 标签</p>
+
+    <h3 id="element">这是一个伪类选择器示例</h3>
+</body>
